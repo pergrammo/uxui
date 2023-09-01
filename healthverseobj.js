@@ -373,7 +373,7 @@ const HealthverseObj = (() => {
     }
 
     // navbar fn.
-    hvobj.navbar = function () {
+    hvobj.navbar = function (liff) {
         var navItems = document.querySelectorAll("ul.nav li");
         var slider = document.querySelectorAll(".slider");
 
@@ -403,32 +403,32 @@ const HealthverseObj = (() => {
                         case 0:
                             // get mainlist
                             $('#page-name').empty();
-                            $('#page-name').append(`<strong>Points</strong>`);
-                            Mainim.querymainlist();
+                            $('#page-name').append(`<strong>แต้มสะสม</strong>`);
+                            Mainim.mainlist(liff);
                             break;
                         case 1:
                             // get scanqr
                             $('#page-name').empty();
-                            $('#page-name').append(`<strong>Scan QR</strong>`);
-                            Scanqrim.scanqrstart();
+                            $('#page-name').append(`<strong>สแกน QR</strong>`);
+                            Scanqrim.scanqrstart(liff);
                             break;
                         case 2:
                             // get history
                             $('#page-name').empty();
-                            $('#page-name').append(`<strong>History</strong>`);
-                            Historyim.historystart();
+                            $('#page-name').append(`<strong>ใช้จ่ายแต้ม</strong>`);
+                            Historyim.historystart(liff);
                             break;
                         case 3:
                             // get more
                             $('#page-name').empty();
-                            $('#page-name').append(`<strong>More</strong>`);
-                            Moreim.morestart();
+                            $('#page-name').append(`<strong>เพิ่มเติม</strong>`);
+                            Moreim.morestart(liff);
                             break;
                         default:
                             // get mainlist
                             $('#page-name').empty();
-                            $('#page-name').append(`<strong>Points</strong>`);
-                            Mainim.querymainlist();
+                            $('#page-name').append(`<strong>แต้มสะสม</strong>`);
+                            Mainim.mainlist(liff);
                             break;
                     }
                 }
